@@ -1,0 +1,724 @@
+/* ===== GLOBAL STYLE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0a1118 !important; /* Background gelap solid */
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: #ffffff;
+    line-height: 1.6;
+}
+/* ===== CONTAINER ===== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    width: 100%;
+    padding: 18px 0;
+    background: rgba(10, 10, 20, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    border-bottom: 1px solid rgba(0,255,255,0.2);
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: block !important;
+    color: cyan !important;
+    z-index: 10001 !important;
+}
+
+nav {
+    position: relative;
+}
+
+.nav-link {
+    color: #a8b2d1;
+    margin-left: 25px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: .3s;
+    padding-bottom: 5px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: cyan;
+    text-shadow: 0 0 8px cyan;
+}
+
+/* Underline Neon */
+.underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0px;
+    background: cyan;
+    box-shadow: 0 0 8px cyan;
+    transition: .3s;
+    border-radius: 10px;
+}
+
+/* ===== HERO (HOME) ===== */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    color: cyan;
+    text-shadow: 0 0 20px cyan;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+/* ===== SECTION GENERIC ===== */
+.section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.title {
+    font-size: 40px;
+    color: cyan;
+    text-shadow: 0 0 15px cyan;
+}
+
+.title-glow {
+    color: cyan !important;
+    text-shadow: 0 0 15px cyan, 0 0 30px rgba(0, 255, 255, 0.5);
+    text-align: center;
+}
+
+.subtitle {
+    margin-bottom: 0 !important; /* Biar gak nambah jarak liar */
+    padding-bottom: 0 !important;
+}
+
+/* ===================
+   NAVBAR GLOBAL
+=================== */
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(10, 17, 24, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    color: cyan;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px cyan;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+/* underline neon mengikuti menu */
+.underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0px;
+    height: 2px;
+    background: cyan;
+    box-shadow: 0 0 10px cyan;
+    transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: cyan;
+}
+
+/* =========================================
+   FULL UNIFIED STYLE (TENTANG & KOMPETENSI)
+   ========================================= */
+/* 1. Paksa Judul Di Mana Pun Jadi Neon Cyan */
+.tentang-section, 
+.kompetensi-section {
+    position: relative !important;
+    z-index: 1 !important; /* Navbar tadi kan 10000, jadi ini aman di bawah */
+    padding-top: 100px !important; /* Kasih ruang biar gak ketutup navbar */
+}
+/* 3. JUDUL WAJIB NEON CYAN (ANTI PUTIH) */
+h1, 
+.title-glow, 
+.tentang-section h1, 
+.kompetensi-section h1 {
+    color: #00ffff !important;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.8), 
+                 0 0 30px rgba(0, 255, 255, 0.4) !important;
+    font-size: clamp(2.5rem, 5vw, 3.2rem) !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    margin-bottom: 10px !important;
+    text-align: center !important;
+    letter-spacing: 2px !important;
+}
+
+/* 4. Subtitle Deskripsi (Identik) */
+.subtitle {
+    color: #cbd5e0 !important;
+    font-size: 1.1rem !important;
+    max-width: 750px;
+    margin: 0 auto 60px auto !important;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* 5. Grid Horizontal Simetris */
+.tentang-grid, 
+.kompetensi-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    gap: 30px !important;
+    width: 90% !important;
+    max-width: 1200px !important;
+    margin: 80px auto 0 !important; /* KUNCI: Jarak 80px dari subtitle ke card */
+}
+/* 6. Kartu Style (Identik Total) */
+.tentang-card, 
+.kompetensi-card {
+    flex: 1 !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(0, 255, 255, 0.3) !important;
+    border-radius: 20px !important;
+    padding: 50px 25px !important; /* Padding dalem kartu disamain */
+    text-align: center !important;
+    text-decoration: none !important;
+    transition: 0.3s ease !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tentang-card:hover, 
+.kompetensi-card:hover {
+    border-color: #00ffff !important;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.3) !important;
+    transform: translateY(-10px) !important;   
+}
+
+/* 7. Judul Dalam Kartu (Wajib Neon) */
+.tentang-card h2, .kompetensi-card h2,
+.tentang-card h3, .kompetensi-card h3 {
+    color: #00ffff !important; /* Kunci Neon */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5) !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 15px !important;
+}
+
+/* 8. Teks Paragraf & Link (Putih Bersih) */
+.tentang-card p, .kompetensi-card p,
+.tentang-card a, .kompetensi-card a {
+    color: #ffffff !important; /* Isi keterangan tetep putih biar kontras */
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    text-decoration: none !important;
+}
+/* Ikon atau Image */
+.tentang-card img, .kompetensi-card img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+/* =========================================
+   GALERI FORMAT 3 - 2 (PIRAMIDA TERBALIK)
+   ========================================= */
+
+.galeri-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;      /* Biar bisa turun ke baris baru */
+    justify-content: center !important; /* Semua item rata tengah */
+    gap: 30px !important;            /* Jarak antar foto */
+    max-width: 1000px !important;    /* Kunci lebar biar gak mencar */
+    margin: 40px auto !important;
+}
+
+.galeri-item {
+    /* Untuk dapet 3 foto di baris pertama: 
+       (100% / 3) - gap = sekitar 30% */
+    flex: 0 1 calc(30% - 20px) !important; 
+    min-width: 250px !important;     /* Biar foto gak kekecilan */
+    height: 300px !important;
+    border: 2px solid #00ffff !important;
+    border-radius: 20px !important;
+    overflow: hidden;
+    position: relative;
+    transition: 0.4s ease-in-out;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Efek Glow & Hover */
+.galeri-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+    border-color: #ffffff !important;
+}
+
+.galeri-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+    transition: 0.4s;
+}
+
+.galeri-item:hover img {
+    filter: brightness(1.1);
+}
+
+/* Caption Nama Siswa */
+.img-caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #00ffff;
+    color: #0a1118;
+    padding: 12px;
+    font-weight: 800;
+    text-align: center;
+    transform: translateY(100%);
+    transition: 0.3s;
+}
+
+.galeri-item:hover .img-caption {
+    transform: translateY(0);
+}
+
+/* Responsive: Kalau di layar HP balik jadi 1 kolom biar gak penyet */
+@media (max-width: 768px) {
+    .galeri-item {
+        flex: 0 1 100% !important;
+        max-width: 400px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* detail.css - Versi Anti-Hilang */
+body {
+    background: #0a0f1a !important;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Ini Kotak Neonnya */
+.detail-box {
+    background: rgba(10, 15, 26, 0.95) !important;
+    padding: 50px 40px !important;
+    border-radius: 20px !important;
+    border: 2px solid cyan !important; /* Garis Biru Neon */
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3) !important;
+    max-width: 650px;
+    width: 90%;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.detail-box h1 {
+    color: cyan !important;
+    text-shadow: 0 0 15px cyan;
+    margin-bottom: 20px;
+}
+
+.detail-box p {
+    color: #ccc !important;
+    line-height: 1.8;
+}
+
+.btn-back {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    background: cyan !important;
+    color: #0a0f1a !important;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 0 10px cyan;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px cyan;
+}
+
+/* =========================================
+   STYLE GURU PENDAMPING
+   ========================================= */
+.guru-section {
+    padding: 120px 20px 60px !important;
+    text-align: center;
+}
+
+.guru-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 800px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid #00ffff;
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.guru-img img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid #00ffff;
+}
+
+.guru-info {
+    text-align: left;
+}
+
+.guru-info h2 {
+    color: #00ffff !important;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.guru-info .jabatan {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.guru-info .pesan {
+    font-style: italic;
+    color: #cbd5e0;
+    line-height: 1.6;
+}
+
+/* =========================================
+   FIX GURU PENDAMPING & FOOTER (ANTI-BENTROK)
+   ========================================= */
+
+/* =========================================
+   GURU SECTION FULL HEIGHT & LONG CARD
+   ========================================= */
+.guru-section-full {
+    padding: 150px 0 !important;
+    min-height: 100vh; /* Pastikan halaman full layar */
+    background: radial-gradient(circle at top, #0d1a26 0%, #0a1118 100%);
+}
+
+.guru-grid-pro {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    gap: 40px !important;
+    margin-top: 60px !important;
+    flex-wrap: wrap;
+}
+
+/* KARTU DIBUAT LEBIH TINGGI/PANJANG */
+.guru-card-pro {
+    flex: 0 1 350px !important; /* Lebar lebih proporsional */
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 2px solid #00ffff !important;
+    border-radius: 30px !important;
+    padding: 30px !important;
+    text-align: center;
+    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.guru-card-pro:hover {
+    transform: translateY(-20px) scale(1.02);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
+    background: rgba(0, 255, 255, 0.05) !important;
+}
+
+/* FOTO DIBUAT LEBIH BESAR & PANJANG */
+.guru-img-pro {
+    width: 100% !important;
+    height: 380px !important; /* TINGGI FOTO DITAMBAH */
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    background: #111;
+}
+
+.guru-img-pro img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    filter: grayscale(20%);
+    transition: 0.5s;
+}
+
+.guru-card-pro:hover .guru-img-pro img {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+/* INFO TEXT */
+.guru-info-pro h3 {
+    color: #00ffff !important;
+    font-size: 1.6rem !important;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    margin-bottom: 5px;
+}
+
+.guru-info-pro .role {
+    color: #ffffff !important;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+
+.guru-info-pro .desc {
+    color: #a8b2d1 !important;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* Responsif buat HP */
+@media (max-width: 768px) {
+    .guru-grid {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .guru-card {
+        width: 100% !important;
+    }
+}
+
+/* =========================================
+   UNIFORM LARGE ICON SYSTEM (TENTANG & KOMPETENSI)
+   ========================================= */
+
+.card-icon {
+    font-size: 4rem !important; /* UKURAN DIBUAT JAUH LEBIH GEDE */
+    height: 100px !important;    /* Kasih ruang tinggi biar gak mepet */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-bottom: 20px !important;
+    color: #00ffff !important; /* Warna Cyan Neon */
+    filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.7)) !important; /* Efek nyala lebih tebel */
+    transition: 0.4s ease !important;
+}
+
+/* Kalau lu pake gambar/logo (bukan emoji/icon font) */
+.card-icon img {
+    width: 120px !important; /* Lebar logo diperbesar */
+    height: auto !important;
+    filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.8));
+}
+
+/* Efek pas kartunya di-hover */
+.card-link:hover .card-icon, 
+.tentang-card:hover .card-icon {
+    transform: scale(1.15) !important; /* Makin gede pas disentuh mouse */
+    filter: drop-shadow(0 0 25px rgba(0, 255, 255, 1)) !important;
+}
+
+.tentang-section .title-glow, 
+.kompetensi-section .title-glow {
+    margin-bottom: 5px !important; /* Judul mepet ke subtitle */
+}
+
+.tentang-section .subtitle, 
+.kompetensi-section .subtitle {
+    margin-bottom: 30px !important; /* Subtitle mepet ke kartu (grid) */
+}
+
+.tentang-grid, 
+.kompetensi-grid {
+    margin-top: 20px !important; /* INI KUNCINYA: Dari 100px kita pangkas jadi 20px biar mepet su! */
+    display: flex !important;
+    gap: 20px !important;
+}
+
+/* Pastikan gak ada padding tambahan di atas grid */
+.tentang-section {
+    padding-top: 100px !important; /* Jarak pas dari navbar */
+}
+
+/* ===== RESPONSIVE NAVBAR ===== */
+
+/* Sembunyikan toggle di laptop */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background: cyan;
+    box-shadow: 0 0 8px cyan;
+    border-radius: 5px;
+}
+
+/* SETTING DI HP (Screen < 768px) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Munculin garis tiga */
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        right: -100%; /* Sembunyiin menu ke kanan layar */
+        width: 70%;
+        height: 100vh;
+        background: #0a1118;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        transition: 0.4s ease;
+        border-left: 1px solid cyan;
+    }
+
+    /* Muncul pas tombol di-klik */
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-link {
+        margin: 15px 0;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 1. Paksa Container Nav Tetap Sebaris */
+    .nav-flex {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    /* 2. Kecilin Logo Biar Gak Makan Tempat */
+    .logo {
+        font-size: 16px !important; /* Biar gak menuhin layar HP */
+        max-width: 60%;
+        text-align: left;
+    }
+
+    /* 3. SEMBUNYIKAN MENU UTAMA (WAJIB) */
+    .nav-menu {
+        position: fixed !important;
+        top: 0;
+        right: -100% !important; /* Lempar ke luar layar kanan */
+        width: 70% !important;
+        height: 100vh !important;
+        background: rgba(10, 17, 24, 0.98) !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        transition: 0.4s ease-in-out !important;
+        z-index: 9999;
+        display: flex !important; /* Tetap flex tapi di luar layar */
+    }
+
+    /* Muncul pas tombol garis tiga diklik */
+    .nav-menu.active {
+        right: 0 !important; /* Masuk ke layar */
+    }
+
+    /* 4. Munculkan Tombol Garis Tiga */
+    .menu-toggle {
+        display: flex !important;
+        z-index: 10000;
+    }
+
+    /* 5. Jarak Link Menu di HP */
+    .nav-link {
+        margin: 15px 0 !important;
+        font-size: 1.2rem !important;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+    .underline {
+        display: none; /* Matiin underline di HP biar gak berantakan */
+    }
